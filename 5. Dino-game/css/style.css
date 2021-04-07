@@ -1,0 +1,105 @@
+/* Обнуление
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+
+.game {
+	width: 600px;
+	height: 200px;
+	border-bottom: 1px solid black;
+	margin: auto;
+}
+
+
+/************ 
+DINO
+************/
+#dino {
+	width: 50px;
+	height: 50px;
+	background-image: url(../img/dino.png);
+	background-size: 50px 50px;
+	position: relative;
+	top: 150px;
+}
+
+
+/************ 
+CACTUS
+ ************/
+#cactus {
+	width: 20px;
+	height: 40px;
+	background-image: url(../img/cactus.png);
+	background-size: 20px 40px;
+	position: relative;
+	top: 110px;
+	left: 580px;
+	animation: cactusMov 2s infinite linear;
+}
+
+@keyframes cactusMov {
+	0% {
+		left: 580px;
+	}
+	100% {
+		left: -20px;
+	}
+}
+
+
+/************ 
+JUMP 
+************/
+.jump {
+	animation: jump 0.4s ;
+} 
+
+@keyframes jump {
+	0% {
+		top: 150px;
+	}
+	30% {
+		top: 120px;
+	}
+	50% {
+		top: 60px;
+	}
+	80% {
+		top: 120px;
+	}
+	100% {
+		top: 150px;
+	}
+}
